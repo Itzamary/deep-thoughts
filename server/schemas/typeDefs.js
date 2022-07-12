@@ -11,7 +11,7 @@ type Thought {
     reactionCount: Int
 }
 type Query {
-    thoughts: [Thought] 
+    thoughts(username: String): [Thought] 
 }
 `;
 
