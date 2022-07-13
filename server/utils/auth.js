@@ -31,7 +31,8 @@ module.exports = {
         } catch {
           console.log('Invalid token');
         }
-      
+
+        console.log(req.user, 'req.user')
         // return updated request object
         return req;
     },
