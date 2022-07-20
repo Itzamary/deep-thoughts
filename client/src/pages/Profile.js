@@ -1,5 +1,6 @@
 import React from 'react';
 import FriendList from '../components/FriendList';
+import ThoughtForm from '../components/ThoughtForm';
 import Auth from '../utils/auth';
 import { Navigate, useParams } from 'react-router-dom';
 import ThoughtList from '../components/ThoughtList';
@@ -55,7 +56,7 @@ const Profile = () => {
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
-        
+
         {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
             Add Friend
@@ -76,6 +77,7 @@ const Profile = () => {
           />
         </div>
       </div>
+      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
     </div>
   );
 };
